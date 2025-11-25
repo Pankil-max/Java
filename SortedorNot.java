@@ -22,7 +22,7 @@ public class SortedorNot {
 
     public static boolean isincreasing(int arr[]) {
         for (int i = 1; i < arr.length - 1; i++) {
-            if (arr[i] > arr[i - 1]) {
+            if (arr[i] < arr[i - 1]) {
                 return false;
             }
         }
@@ -31,7 +31,7 @@ public class SortedorNot {
 
     public static boolean isdecreasing(int arr[]) {
         for (int i = 1; i < arr.length - 1; i++) {
-            if (arr[i] < arr[i - 1]) {
+            if (arr[i] > arr[i - 1]) {
                 return false; 
             }
         }
