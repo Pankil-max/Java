@@ -6,7 +6,20 @@ public class Car {
     int no_of_seats;
     float max_speed;
 
-    public  void drive(){
+    Car(String color){
+        this.color=color;
+        current_fuel_level=3;
+        no_of_seats=5;
+        no_ofwheels=44;
+        max_speed=150;
+    }
+    // Constructor chaining if no color args is passed than color is set to black automatically
+    
+    Car(){
+        this("Black");
+    }
+
+    public  Car drive(){
         if(current_fuel_level<=0){
             System.out.println("Car is out of fuel");
 
@@ -23,10 +36,17 @@ public class Car {
             current_fuel_level--;
 
         }
+        return this;
         
     }
-    public  void add_fuel(float addFuel){
-        current_fuel_level+=addFuel;
+    public Car Start(){
+        current_fuel_level--;
+        System.out.println("Car is Started.....bruh........................");
+        return this;
+
+    }
+    public  void add_fuel(float current_fuel_level){
+        this.current_fuel_level+=current_fuel_level;
     }
     
 
